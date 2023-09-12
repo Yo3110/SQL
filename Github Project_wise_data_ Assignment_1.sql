@@ -78,5 +78,4 @@ WITH highest AS
 SELECT * FROM highest where highest.denserank=3;
 
 
-select * from EmployeeDetails
-select * from EmployeeSalary
+
