@@ -33,11 +33,11 @@ select * from Employeeinfo
 select * from EmployeePositon
 
 
--- 1.Write a query to get the current date.
+-- 1.Write a query to get the currentÂ date.
 
 select getdate() as customerdate
 
---2.Write a query to retrieve the first four characters of EmpLname from the EmployeeInfo table.
+--2.Write a query to retrieve the first four characters of EmpLname from the EmployeeInfoÂ table.
 
 SELECT SUBSTRING (EmpLname,1,4) AS NAME FROM EmployeeInfo;
 
@@ -47,20 +47,20 @@ SELECT SUBSTRING(Address, 1, CHARINDEX('(',Address)) FROM EmployeeInfo;
 
 --4. Write a query to create a new table that consists of data and structure copied from the other table. 
 
-SELECT * INTO Mysales FROM SALES 
+SELECT * INTO Mysales FROM SALESÂ 
 
---5. Write q query to find all the employees whose salary is between 50000 to 100000.?
+--5. Write q query to find all the employees whose salary is between 50000Â toÂ 100000.?
 select * from Employeeinfo where empid in (select empid from EmployeePositon where Salary between 50000 and 100000);
 SELECT * FROM EmployeePositon where Salary between 50000 and 100000;
-select * from Employeeinfo E join EmployeePositon P on e.EmpID=p.EmpID where Salary between 50000 and 100000;
+select * from Employeeinfo E join EmployeePositon P on e.EmpID=p.EmpID where Salary between 50000Â andÂ 100000;
 
---6. Write a query to find the names of employees that begin with ‘S’
-SELECT * FROM EmployeeInfo WHERE EmpFname LIKE 'S%';
+--6. Write a query to find the names of employees that begin with â€˜Sâ€™
+SELECT * FROM EmployeeInfo WHERE EmpFnameÂ LIKEÂ 'S%';
 
 -- Q7. Write a query to fetch top N records.
 SELECT TOP 2 * FROM EmployeePositon ORDER BY SALARY ASC ;
 
--- Q8. Write a query to retrieve the EmpFname and EmpLname in a single column as “FullName”. The first name and the last name must be separated with space.
+-- Q8. Write a query to retrieve the EmpFname and EmpLname in a single column as â€œFullNameâ€. The first name and the last name must be separated with space.
 SELECT CONCAT (empfname,' ',EmpLname) as FULLNAME FROM EmployeeInfo;
 
 select * from Employeeinfo
@@ -74,15 +74,15 @@ SELECT COUNT(*), GENDER FROM Employeeinfo WHERE DOB between '1968/05/02' AND '19
 
 SELECT * FROM Employeeinfo order by emplname desc, department asc;
 
--- Q11. Write a query to fetch details of employees whose EmpLname ends with an alphabet ‘A’ and contains five alphabets.
+-- Q11. Write a query to fetch details of employees whose EmpLname ends with an alphabet â€˜Aâ€™ and contains five alphabets.
 
 SELECT * FROM Employeeinfo WHERE (EmpLname) LIKE'%A';
 
--- Q12. Write a query to fetch details of all employees excluding the employees with first names, “Sanjay” and “Sonia” from the EmployeeInfo table.
+-- Q12. Write a query to fetch details of all employees excluding the employees with first names, â€œSanjayâ€ and â€œSoniaâ€ from the EmployeeInfo table.
 
 SELECT * FROM Employeeinfo WHERE EmpFname NOT IN ('SANJAY','SONIA');
 
--- Q13. Write a query to fetch details of employees with the address as “DELHI(DEL)”.
+-- Q13. Write a query to fetch details of employees with the address as â€œDELHI(DEL)â€.
 
 SELECT * FROM Employeeinfo WHERE Address='DELHI(DEL)';
 SELECT * FROM Employeeinfo WHERE Address LIKE 'DELHI(DEL)%';
@@ -92,7 +92,7 @@ SELECT * FROM Employeeinfo WHERE Address LIKE 'DELHI(DEL)%';
 SELECT E.EMPFNAME, E.EMPLNAME, P.EmpPosition FROM  
 Employeeinfo E INNER JOIN EmployeePositon P ON E.EmpID=P.EmpID WHERE EmpPosition IN ('MANAGER');
 
--- Q15. Write a query to fetch the department-wise count of employees sorted by department’s count in ascending order.
+-- Q15. Write a query to fetch the department-wise count of employees sorted by departmentâ€™s count in ascending order.
 
 SELECT DEPARTMENT, COUNT(EMPID) AS DEPTCOUNT FROM Employeeinfo GROUP BY Department ORDER BY Department ASC;
 
@@ -106,7 +106,8 @@ SELECT * FROM Employeeinfo E WHERE EXISTS (SELECT * FROM EmployeePositon P  WHER
 SELECT E.EMPFNAME, E.EMPLNAME, E.Department, E.Project, E.Address, DateofJoining FROM  
 Employeeinfo E JOIN EmployeePositon P ON E.EmpID=P.EmpID;
 
---Q18. Write a query to retrieve two minimum and maximum salaries from the EmployeePosition table.
+--Q18. Write a query to retrieve two minimum and maximum salaries from the EmployeePosition table.
+
 SELECT MIN (SALARY) AS MINSAL FROM EmployeePositon GROUP BY Salary
 
 SELECT DISTINCT Salary FROM EmployeePosition E1 WHERE 2 >= 
@@ -121,7 +122,10 @@ SELECT SALARY FROM EmployeePositon P1 WHERE N-1 =
 (SELECT COUNT (DISTINCT(P1.Salary)) FROM EmployeePositon P2 WHERE P2.Salary>P1.Salary);
 
 SELECT Salary FROM EmployeePosition E1 WHERE N-1 = ( SELECT 
-COUNT( DISTINCT ( E2.Salary ) ) FROM EmployeePosition E2 WHERE E2.Salary > E1.Salary );-- Q20.What will be the output for this query : SELECT count(*) from table1, table2
+COUNT( DISTINCT ( E2.Salary ) ) FROM EmployeePosition E2 WHERE E2.Salary > E1.Salary );
+
+-- Q20.What will be the output for this query : SELECT count(*) from table1, table2
+
 SELECT COUNT(*) FROM Employeeinfo, EmployeePositon;
 	
 
