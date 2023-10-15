@@ -6,7 +6,9 @@ This analysis will provide great insight to the stake holders to take right and 
 **Database and Tools:**
 
 Microsoft SQL Server Management Studio
+
 Microsoft Excel
+
 Microsoft Powerpoint 
 
 ![MusicDatabaseSchema](https://github.com/Yo3110/SQL/assets/143214362/fa739440-cb6e-48d8-ba63-409174e0a5b7)
