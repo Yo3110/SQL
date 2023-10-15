@@ -3,9 +3,10 @@ This project will show you how to analyze the music playlist database. I have ex
 
 This analysis will provide great insight to the stake holders to take right and effective decisions.
 
-******Database and Tools:******
+**Database and Tools:**
 
 Microsoft SQL Server Management Studio
 Microsoft Excel
 Microsoft Powerpoint 
-[README.md](https://github.com/Yo3110/SQL/files/12909372/README.md)
+
+![MusicDatabaseSchema](https://github.com/Yo3110/SQL/assets/143214362/fa739440-cb6e-48d8-ba63-409174e0a5b7)
