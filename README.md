@@ -7,4 +7,5 @@ This analysis will provide great insight to the stake holders to take right and 
 
 Microsoft SQL Server Management Studio
 Microsoft Excel
-Microsoft Powerpoint[README.md](https://github.com/Yo3110/SQL/files/12909372/README.md)
+Microsoft Powerpoint 
+[README.md](https://github.com/Yo3110/SQL/files/12909372/README.md)
