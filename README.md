@@ -1,4 +1,4 @@
-****Digital Music Store Analysis****
+********Digital Music Store Analysis********
 
 [Portfoli Link](https://github.com/Yo3110/SQL/tree/b1629e588d962c78957e53aad55d3dbcc5ac3bed/Digital%20Music%20Store%20Analysis)
 
